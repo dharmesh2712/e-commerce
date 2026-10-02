@@ -8,4 +8,6 @@ Router.post(
   userController.uploadProfile
 )
 
+Router.get("/getUsers",userController.getUser)
+
 module.exports = Router

@@ -10,4 +10,13 @@ const uploadProfile = async(req,res) =>{
   res.status(200).send(user)
 }
 
-module.exports = {uploadProfile}
+const getUser = async(req,res)=>{
+  const {page,limit} = req.query;
+  console.log(page,limit)
+  let skip = Number(page-1) * Number(limit)
+  console.log(skip)
+  let users = await User.find().skip(skip).limit(limit)
+  res.status(200).send(users)
+}
+
+module.exports = {uploadProfile,getUser}
