@@ -1,6 +1,6 @@
 const Router = require('express').Router();
-const productController = require('../controller/productcontroller')
-const uploadMidddleware = require('../middleware/upload')
+const productController = require('../controllers/product.controller')
+const uploadMidddleware = require('../../middleware/upload')
 
 Router.post('/create',productController.create)
 

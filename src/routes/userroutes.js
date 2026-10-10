@@ -1,6 +1,6 @@
 const Router = require('express').Router()
-const userController = require('../controller/usercontroller')
-const uploadMiddleware = require('../middleware/upload')
+const userController = require('../controllers/user.controller')
+const uploadMiddleware = require('../../middleware/upload')
 
 Router.post(
   '/uploadProfile/:userId',

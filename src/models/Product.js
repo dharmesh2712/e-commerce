@@ -22,7 +22,7 @@ const Product = new mongoose.Schema(
     image: {
       type: String,
       require: true,
-      default:''
+      default: "",
     },
     description: {
       type: String,
@@ -34,7 +34,7 @@ const Product = new mongoose.Schema(
   },
   {
     timestamps: true,
-  },
+  }
 );
 
 module.exports = mongoose.model("Product", Product);

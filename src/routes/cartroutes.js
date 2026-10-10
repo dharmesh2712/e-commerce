@@ -1,5 +1,5 @@
 const Router = require('express').Router()
-const cartController = require('../controller/cartcontroller')
+const cartController = require('../controllers/cart.controller')
 
 Router.post('/add/:productId', cartController.addToCart)
 
